@@ -8,8 +8,9 @@ export interface Application {
     categoryId: number;
     categoryName: string;
     grid: AppGrid;
-    fields: { [id: number]: BaseField };
-    fieldIds: number[];
+    // fields: { [id: number]: BaseField };
+    fields: BaseField[];
+    // fieldIds: number[];
     published: boolean;
     created: Date;
     /** нижние поля я пока не понял для чего используется */
@@ -24,14 +25,14 @@ export interface Application {
 }
 
 export interface AppGrid {
-    gap?: number | [number, number];
+    // gap?: number | [number, number];
     columnCount: number;
     items: AppGridItem[];
 }
 
 export interface AppGridItem {
-    top?: number;
-    left?: number;
+    // top?: number;
+    // left?: number;
     colSpan?: number;
     rowSpan?: number;
     fieldId?: number;
